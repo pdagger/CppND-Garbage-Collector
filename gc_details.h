@@ -29,5 +29,6 @@ template <class T>
 bool operator==(const PtrDetails<T> &ob1,
                 const PtrDetails<T> &ob2)
 {
-    // TODO: Implement operator==
+    // DONE: Implement operator==
+    return obj_1.memPtr == obj_2.memPtr;
 }
