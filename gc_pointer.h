@@ -106,17 +106,27 @@ Pointer<T,size>::Pointer(T *t){
         atexit(shutdown);
     first = false;
 
-    // TODO: Implement Pointer constructor
+    // DONE: Implement Pointer constructor
     // Lab: Smart Pointer Project Lab
-
+    PtrDetails<T> ptr(t);
+    refContainer.push_back(ptr);
+    adrr = t;
+    isArray = false;
+    arraySize = 0;
 }
 // Copy constructor.
 template< class T, int size>
 Pointer<T,size>::Pointer(const Pointer &ob){
 
-    // TODO: Implement Pointer constructor
+    // DONE: Implement Pointer constructor
     // Lab: Smart Pointer Project Lab
+    typename std::list<PtrDetails<T> >::iterator ptr;
+    ptr = findPtrInfo(ob.addr);
+    ptr->refcount++;
 
+    this->addr = ob.addr;
+    this->isArray = ob.isArray;
+    this->arraySize = ob.arraySize;
 }
 
 // Destructor for Pointer.
