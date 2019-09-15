@@ -18,7 +18,7 @@ array, then arraySize contains its size */
     // If this is an array, then size specifies
     // the size of the array.
 
-    PtrDetails(T* ptr, unsigned size=0): memPtr(ptr), refcount(1) {
+    PtrDetails(T* ptr, unsigned size=0): memPtr(ptr) {
         // DONE: Implement PtrDetails
         if (size > 0){
             arraySize = size;
