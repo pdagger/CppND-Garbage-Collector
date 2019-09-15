@@ -27,6 +27,7 @@ array, then arraySize contains its size */
         else {
             isArray = false;
         }
+        refcount = 1;
     }
 };
 // Overloading operator== allows two class objects to be compared.
